@@ -40,7 +40,10 @@ export default function Home() {
               key="experience"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className={styles.experienceContainer} // <-- TODA la estructura aquí
+              transition={{ duration: 1.5, ease: "easeOut" }}
+              // Esto asegura que al terminar, el navegador trate al div como un elemento estático y nítido
+              style={{ opacity: 1, backfaceVisibility: "hidden" }}
+              className={styles.experienceContainer}
             >
               <div className={styles.textSection}>
                 <ManifestoText />
