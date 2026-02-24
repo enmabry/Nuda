@@ -24,7 +24,7 @@ export const BackgroundLayer = ({ active }: { active: boolean }) => (
           <Dither
             waveColor={[0.5, 0.5, 0.5]} // Color gris medio
             disableAnimation={false} // Permite animación
-            enableMouseInteraction // Permite interacción con el mouse
+            enableMouseInteraction={false}// Permite interacción con el mouse
             mouseRadius={0.3} // Radio de interacción del mouse
             colorNum={12} // Número de colores
             pixelSize={3} // Tamaño de píxel
