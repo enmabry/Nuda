@@ -1,0 +1,46 @@
+# Node modules
+node_modules/
+
+# Build outputs
+.next/
+out/
+dist/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Env files
+.env*
+
+# Editor configs
+.vscode/
+.idea/
+*.swp
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Coverage
+coverage/
+
+# Misc
+*.local
+*.sublime*
+
+# Optional: lockfiles (si usas solo uno, ignora los otros)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Next.js export
+out/
+
+# Images built by next/image
+public/_next/image/
