@@ -1,0 +1,70 @@
+.logicContainer {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000; // Negro absoluto para romper el dither
+  position: relative;
+  z-index: 30; // Asegura que tape el fondo fijo al subir
+  padding: 4rem 2rem;
+}
+
+.content {
+  max-width: 1000px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.label {
+  color: #a31d1d;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.6em;
+  margin-bottom: 3rem;
+  display: block;
+}
+
+.title {
+  color: #ffffff;
+  font-size: clamp(3.5rem, 9vw, 7rem);
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 0.95;
+  margin-bottom: 2.5rem;
+
+  .outline {
+    display: block;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+  }
+}
+
+.description {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  max-width: 550px;
+  line-height: 1.8;
+  margin-bottom: 4rem;
+}
+
+.terminalDecoration {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: #a31d1d;
+  opacity: 0.8;
+  display: flex;
+  gap: 4px;
+
+  .cursor {
+    animation: blink 1s infinite;
+  }
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}

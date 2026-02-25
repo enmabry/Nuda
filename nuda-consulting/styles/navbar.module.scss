@@ -1,0 +1,74 @@
+.navWrapper {
+  position: fixed;
+  top: 1.5rem;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 50;
+  pointer-events: none;
+}
+
+.navBar {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 2rem;
+  background: rgba(10, 10, 10, 0.4);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+  transition: width 0.8s cubic-bezier(0.22, 1, 0.36, 1), 
+              max-width 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  overflow: hidden; // Para que el logo no salte antes de tiempo
+}
+
+// ESTADOS DINÁMICOS
+.isCentered {
+  width: 90%;
+  max-width: 400px; // Más estrecho para que los 3 links se vean centrados
+  justify-content: center;
+}
+
+.isExpanded {
+  width: 95%;
+  max-width: 800px; // Se ensancha para dar paso al logo
+  justify-content: space-between;
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.brand {
+  color: #ffffff;
+  font-family: 'Mono', monospace;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  margin-right: 1.5rem;
+}
+
+.navList {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navLink {
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  transition: color 0.4s ease;
+
+  &:hover {
+    color: #ffffff;
+  }
+}

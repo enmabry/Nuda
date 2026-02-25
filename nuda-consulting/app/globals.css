@@ -22,3 +22,32 @@ body {
   font-family: var(--font-mono); /* Nuda prefiere mono */
   -webkit-font-smoothing: antialiased;
 }
+html, body {
+  background-color: #0a0a0a; /* Negro Nuda */
+  margin: 0;
+  padding: 0;
+  /* El scroll ahora ocurre en el cuerpo, pero el fondo no se debe cortar */
+  min-height: 100vh;
+}
+
+/* globals.css */
+
+/* Ocultar scrollbar en Chrome, Safari y Opera */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Ocultar scrollbar en IE, Edge y Firefox */
+html {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-y: scroll; /* Asegura que se pueda scrollear aunque no se vea la barra */
+}
+
+@layer base {
+  /* ...existing code... */
+} 

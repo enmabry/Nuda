@@ -1,37 +1,44 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import styles from "@/styles/navbar.module.scss";
 
-export const Navbar = ({ visible }: { visible: boolean }) => {
+interface NavbarProps {
+  visible: boolean;
+  isInternal: boolean; // TRUE cuando haces clic en una opción o cambias de vista
+}
+
+export const Navbar = ({ visible, isInternal }: NavbarProps) => {
   return (
-    <div className="fixed top-6 left-0 w-full flex justify-center z-50 pointer-events-none">
+    <div className={styles.navWrapper}>
       <motion.nav
         initial={{ opacity: 0, y: -40 }}
         animate={visible ? { opacity: 1, y: 0 } : { opacity: 0, y: -40 }}
-        transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 1.2 }}
-        className="
-          pointer-events-auto
-          flex items-center justify-between
-          w-[90%] max-w-[600px] 
-          px-8 py-3
-          bg-nuda-dark/40 backdrop-blur-md
-          border border-nuda-light/10
-          rounded-full
-          shadow-[0_8px_32px_0_rgba(0,0,0,0.8)]
-        "
+        transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+        // Aplicamos la clase dinámicamente según el estado
+        className={`${styles.navBar} ${isInternal ? styles.isExpanded : styles.isCentered}`}
       >
-        {/* Identidad Mini */}
-        <div className="text-nuda-light font-mono text-[10px] tracking-tighter">
-          N / A
-        </div>
+        
+        {/* Logo que aparece solo en estado Expandido */}
+        <AnimatePresence>
+          {isInternal && (
+            <motion.div 
+              key="logo"
+              initial={{ width: 0, opacity: 0, x: -20 }}
+              animate={{ width: "auto", opacity: 1, x: 0 }}
+              exit={{ width: 0, opacity: 0, x: -20 }}
+              transition={{ duration: 0.6, ease: "circOut" }}
+              className={styles.logoWrapper}
+            >
+              <span className={styles.brand}>NUDA</span>
+            </motion.div>
+          )}
+        </AnimatePresence>
 
-        {/* Links de Navegación */}
-        <ul className="flex gap-6">
+        {/* Links de Navegación (Framer Motion animará su posición automáticamente) */}
+        <ul className={styles.navList}>
           {["Lógica", "Sistemas", "Contacto"].map((item) => (
             <li key={item}>
-              <a
-                href={`#${item.toLowerCase()}`}
-                className="text-[9px] uppercase tracking-[0.25em] text-nuda-muted hover:text-nuda-light transition-colors duration-500"
-              >
+              <a href={`#${item.toLowerCase()}`} className={styles.navLink}>
                 {item}
               </a>
             </li>
