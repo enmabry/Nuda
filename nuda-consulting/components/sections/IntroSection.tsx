@@ -15,7 +15,7 @@ export const IntroSection = ({ onEnter }: IntroProps) => (
     exit={{ opacity: 0, scale: 0.95 }}
     className="flex flex-col items-center justify-center min-h-screen p-6"
   >
-    <HeroHeader title="NUDA" subtitle="Software en estado puro" />
+    <HeroHeader title="NUDA" subtitle="Servicios tecnológicos" />
     <ActionButton
       label="Entrar en la esencia"
       onClick={onEnter}
