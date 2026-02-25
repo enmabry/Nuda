@@ -11,7 +11,7 @@ export const ArchitecturalTitle = () => {
         transition={{ duration: 1 }}
         className="text-[#a31d1d] font-mono text-[10px] tracking-[0.5em] uppercase mb-12"
       >
-        01 // Lógica
+        01 // Visión
       </motion.span>
 
       {/* Título Principal */}

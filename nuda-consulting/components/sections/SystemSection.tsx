@@ -19,15 +19,15 @@ const techLogos = [
 ];
 
 const systemsData = [
-  { id: "01", title: "Web Systems", desc: "Interfaces de alto rendimiento adaptadas a tu diseño." },
-  { id: "02", title: "Automation", desc: "Bots y flujos de trabajo inteligentes sin fricción." },
-  { id: "03", title: "Infrastructure", desc: "Gestión de hosting y despliegue (IONOS/Cloud)." },
+  { id: "01", title: "Aplicaciones Web", desc: "Interfaces de alto rendimiento adaptadas a tu diseño." },
+  { id: "02", title: "Automatización", desc: "Bots y flujos de trabajo inteligentes sin fricción." },
+  { id: "03", title: "Infraestructura", desc: "Gestión de hosting y despliegue (IONOS/Cloud)." },
 ];
 
 export const SystemsSection = () => {
   return (
     <section id="sistemas" className="min-h-screen w-full bg-black flex flex-col items-center justify-center py-32 px-6 relative">
-      <SectionHeader number="02" title="Sistemas" />
+      <SectionHeader number="02" title="Servicios" />
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-0 w-full max-w-7xl border-t border-white/10">
         {systemsData.map((sys, index) => (

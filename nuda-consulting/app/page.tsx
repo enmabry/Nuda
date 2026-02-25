@@ -43,7 +43,7 @@ export default function Home() {
               <section className="h-screen w-full flex flex-col items-center justify-center px-6">
                 <SectionLabel>Manifiesto Noúmeno</SectionLabel>
                 <ManifestoText />
-                <ScrollIndicator targetId="logica" label="Bajar a la Lógica" />
+                <ScrollIndicator targetId="logica" label="Bajar a la visión" />
               </section>
 
               <LogicSection />

@@ -12,8 +12,8 @@ export const Navbar = ({ visible, isInternal }: NavbarProps) => {
   
   // Definimos los links con rutas absolutas para que funcionen desde cualquier lugar
   const navLinks = [
-    { name: "Lógica", href: "/#logica" },
-    { name: "Sistemas", href: "/sistemas" },
+    { name: "Visión", href: "/#logica" },
+    { name: "Servicios", href: "/sistemas" },
     { name: "Contacto", href: "/#contacto" },
   ];
 
