@@ -1,5 +1,4 @@
 # Nuda
-# Nuda Consulting
 
 ![Logo](nuda-consulting/images/unnamed%20(1).jpg)
 
