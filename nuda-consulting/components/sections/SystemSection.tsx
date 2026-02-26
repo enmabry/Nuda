@@ -38,7 +38,7 @@ export const SystemsSection = () => {
       <TechStack logos={techLogos} />
 
       <div className="absolute bottom-10 font-mono text-[8px] text-gray-800 tracking-[1em] uppercase">
-        Nuda_Systems_Core_v1.0
+        Nuda Systems
       </div>
     </section>
   );

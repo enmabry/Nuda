@@ -45,7 +45,7 @@ export const ArchitecturalTitle = () => {
   "En NUDA nos obsesiona la esencia y la originalidad del concepto. No nos escondemos tras fachadas innecesarias; desnudamos la complejidad para revelar una ingeniería que, al ser impecable, no necesita adornos."
 </motion.p>
 
-      {/* Terminal Prompt */}
+      {/* Terminal Prompt
       <motion.div 
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -53,7 +53,7 @@ export const ArchitecturalTitle = () => {
         className="mt-14 font-mono text-[9px] text-[#a31d1d] opacity-70 tracking-widest uppercase"
       >
         root@nuda:~/logica$ execution_perfect <span className="animate-pulse">_</span>
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 };

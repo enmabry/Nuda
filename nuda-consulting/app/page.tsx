@@ -15,6 +15,7 @@ import { IntroSection } from "@/components/sections/IntroSection";
 import { ManifestoText } from "@/components/ui/Manifesto";
 import { LogicSection } from "@/components/sections/LogicSection";
 import { SystemsSection } from "@/components/sections/SystemSection";
+import { ContactSection } from "@/components/sections/ContactSection"; // 1. IMPORTAR
 
 export default function Home() {
   const [isInside, setIsInside] = useState(false);
@@ -37,7 +38,12 @@ export default function Home() {
           {!isInside ? (
             <IntroSection onEnter={() => setIsInside(true)} />
           ) : (
-            <motion.div key="experience-flow" initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex flex-col items-center">
+            <motion.div 
+              key="experience-flow" 
+              initial={{ opacity: 0 }} 
+              animate={{ opacity: 1 }} 
+              className="flex flex-col items-center"
+            >
               
               {/* HERO: MANIFIESTO */}
               <section className="h-screen w-full flex flex-col items-center justify-center px-6">
@@ -46,8 +52,11 @@ export default function Home() {
                 <ScrollIndicator targetId="logica" label="Bajar a la visión" />
               </section>
 
-              <LogicSection />
-              <SystemsSection />
+              {/* FLUJO DE INGENIERÍA */}
+              <LogicSection />   {/* 01 // Lógica */}
+              <SystemsSection /> {/* 02 // Sistemas */}
+              <ContactSection /> {/* 03 // Contacto - AÑADIDO AQUÍ */}
+              
               <Footer />
 
             </motion.div>
