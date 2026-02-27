@@ -38,27 +38,26 @@ export default function Home() {
           {!isInside ? (
             <IntroSection onEnter={() => setIsInside(true)} />
           ) : (
-            <motion.div 
-              key="experience-flow" 
-              initial={{ opacity: 0 }} 
-              animate={{ opacity: 1 }} 
+            <motion.div
+              key="experience-flow"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
               className="flex flex-col items-center"
             >
-              
               {/* HERO: MANIFIESTO */}
-              <section className="h-screen w-full flex flex-col items-center justify-center px-6">
+              <section
+                id="home"
+                className="h-screen w-full flex flex-col items-center justify-center px-6"
+              >
                 <SectionLabel>Manifiesto Noúmeno</SectionLabel>
                 <ManifestoText />
                 <ScrollIndicator targetId="logica" label="Bajar a la visión" />
               </section>
-
               {/* FLUJO DE INGENIERÍA */}
-              <LogicSection />   {/* 01 // Lógica */}
+              <LogicSection /> {/* 01 // Lógica */}
               <SystemsSection /> {/* 02 // Sistemas */}
               <ContactSection /> {/* 03 // Contacto - AÑADIDO AQUÍ */}
-              
               <Footer />
-
             </motion.div>
           )}
         </AnimatePresence>

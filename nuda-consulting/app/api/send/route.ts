@@ -31,7 +31,7 @@ export async function POST(request: Request) {
       // CAMBIO: Remitente profesional con el nuevo dominio
       from: 'NUDA <contacto@nuda.com.es>', 
       to: [email], 
-      subject: 'ACK: Información recibida',
+      subject: 'Información recibida',
       html: `
         <div style="font-family: monospace; background: #fff; color: #000; padding: 20px; border-left: 4px solid #a31d1d;">
           <h2 style="letter-spacing: 2px;">NUDA // SISTEMAS</h2>
