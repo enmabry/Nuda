@@ -1,0 +1,32 @@
+/* Eliminación total del ruido visual en autocompletado */
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:active,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:active {
+  /* Forzamos que el texto sea blanco, ignorando el color del sistema */
+  -webkit-text-fill-color: #ffffff !important;
+  color: #ffffff !important;
+
+  /* Creamos un fondo negro artificial mediante una sombra interna masiva */
+  -webkit-box-shadow: 0 0 0px 1000px #000000 inset !important;
+  box-shadow: 0 0 0px 1000px #000000 inset !important;
+
+  /* Hacemos que la transición sea casi eterna para que el azul no regrese jamás */
+  transition: background-color 5000000s ease-in-out 0s;
+
+  /* Mantenemos el cursor de escritura en rojo NUDA para coherencia visual */
+  caret-color: #a31d1d !important;
+
+  /* Heredamos la fuente técnica del proyecto */
+  font-family: inherit !important;
+}
+
+/* Fix para navegadores modernos que usan selectores internos */
+input:-internal-autofill-selected {
+  background-color: transparent !important;
+  color: white !important;
+}
