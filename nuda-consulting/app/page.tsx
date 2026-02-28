@@ -15,7 +15,7 @@ import { IntroSection } from "@/components/sections/IntroSection";
 import { ManifestoText } from "@/components/ui/Manifesto";
 import { LogicSection } from "@/components/sections/LogicSection";
 import { SystemsSection } from "@/components/sections/SystemSection";
-import { ContactSection } from "@/components/sections/ContactSection"; // 1. IMPORTAR
+import { ContactSection } from "@/components/sections/ContactSection";
 
 export default function Home() {
   const [isInside, setIsInside] = useState(false);
@@ -38,26 +38,46 @@ export default function Home() {
           {!isInside ? (
             <IntroSection onEnter={() => setIsInside(true)} />
           ) : (
-            <motion.div
-              key="experience-flow"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+            <motion.div 
+              key="experience-flow" 
+              initial={{ opacity: 0 }} 
+              animate={{ opacity: 1 }} 
               className="flex flex-col items-center"
             >
+              
               {/* HERO: MANIFIESTO */}
-              <section
-                id="home"
-                className="h-screen w-full flex flex-col items-center justify-center px-6"
+              <section 
+                id="home" 
+                className="relative h-screen w-full flex flex-col items-center justify-center px-6"
               >
-                <SectionLabel>Manifiesto Noúmeno</SectionLabel>
-                <ManifestoText />
-                <ScrollIndicator targetId="logica" label="Bajar a la visión" />
+                {/* <SectionLabel>Manifiesto Noúmeno</SectionLabel> */}
+                
+                {/* Contenedor principal del texto */}
+                <div className="flex-1 flex items-center justify-center">
+                  <ManifestoText />
+                </div>
+                
+                {/* AJUSTE TÉCNICO: 
+                  Posicionamos el indicador de forma absoluta al fondo 
+                  y le damos más aire en móvil para evitar el choque visual.
+                */}
+                <div className="absolute bottom-8 md:bottom-12 w-full flex justify-center pointer-events-none">
+                  <div className="pointer-events-auto scale-75 md:scale-100 opacity-60 hover:opacity-100 transition-opacity">
+                    <ScrollIndicator targetId="logica" label="Bajar a la visión" />
+                  </div>
+                </div>
               </section>
+
               {/* FLUJO DE INGENIERÍA */}
-              <LogicSection /> {/* 01 // Lógica */}
-              <SystemsSection /> {/* 02 // Sistemas */}
-              <ContactSection /> {/* 03 // Contacto - AÑADIDO AQUÍ */}
+              {/* TIP: Si LogicSection sigue muy pegada arriba en móvil, 
+                puedes añadirle un 'pt-20' extra dentro de su propio componente.
+              */}
+              <LogicSection /> 
+              <SystemsSection />
+              <ContactSection />
+              
               <Footer />
+
             </motion.div>
           )}
         </AnimatePresence>

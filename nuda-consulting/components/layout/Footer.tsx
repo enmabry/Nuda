@@ -23,7 +23,7 @@ export const Footer = () => {
           <div className="flex items-center gap-3">
             <div className="w-2 h-2 bg-[#a31d1d] animate-pulse"></div>
             <span className="text-white font-mono text-[10px] uppercase tracking-[0.5em]">
-              NUDA // CORE_SYSTEM
+              NUDA - Software Logic
             </span>
           </div>
           <p className="text-white/30 font-mono text-[9px] max-w-[200px] leading-relaxed uppercase">
@@ -34,7 +34,7 @@ export const Footer = () => {
         {/* Columna 2: System Status (Lo nuevo y "bonito") */}
         <div className="grid grid-cols-2 gap-16 md:gap-24">
           <div className="space-y-4">
-            <h4 className="text-white/50 font-mono text-[8px] uppercase tracking-widest text-[#a31d1d]">System_Metrics</h4>
+            <h4 className="text-white/50 font-mono text-[8px] uppercase tracking-widest text-[#a31d1d]">System Metrics</h4>
             <div className="space-y-3">
               {[
                 { label: "Uptime", value: "99.99%" },
@@ -52,7 +52,7 @@ export const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-white/50 font-mono text-[8px] uppercase tracking-widest">Availability</h4>
             <div className="flex items-center gap-2">
-              <span className="text-green-500 font-mono text-[10px] tracking-tighter uppercase">READY_FOR_DEPLOYMENT</span>
+              <span className="text-green-500 font-mono text-[10px] tracking-tighter uppercase">READY FOR DEPLOYMENT</span>
             </div>
             <p className="text-white/20 font-mono text-[8px] uppercase">Santander, Cantabria</p>
             <div className="pt-2">
