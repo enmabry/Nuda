@@ -12,9 +12,11 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// nuda-consulting/app/layout.tsx
 export const metadata = {
   title: 'NUDA | Soluciones Tecnológicas',
-  description: 'Ingeniería en su propia esencia. Una experiencia nudista del software.',
+  description: 'Ingeniería de software en su esencia. Soluciones tecnológicas minimalistas y potentes.',
+  keywords: ['software', 'tecnología', 'consultoría', 'NUDA'],
 }
 
 export default function RootLayout({

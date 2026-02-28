@@ -29,7 +29,7 @@ const techLogos = [
 const systemsData = [
   { id: "01", title: "Aplicaciones Web", desc: "Interfaces de alto rendimiento adaptadas a tu diseño." },
   { id: "02", title: "Automatización", desc: "Bots y flujos de trabajo inteligentes sin fricción." },
-  { id: "03", title: "Infraestructura", desc: "Gestión de hosting y despliegue (IONOS/Cloud)." },
+  { id: "03", title: "Infraestructura", desc: "Gestión de hosting y despliegue." },
 ];
 
 export const SystemsSection = () => {
