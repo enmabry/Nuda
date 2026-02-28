@@ -42,12 +42,7 @@ export const SystemsSection = () => {
           <SystemCard key={sys.id} {...sys} index={index} />
         ))}
       </div>
-
       <TechStack logos={techLogos} />
-
-      <div className="absolute bottom-10 font-mono text-[8px] text-gray-800 tracking-[1em] uppercase">
-        Nuda Systems
-      </div>
     </section>
   );
 };
