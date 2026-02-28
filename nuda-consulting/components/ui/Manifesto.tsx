@@ -25,30 +25,22 @@ const itemVariants = {
 };
 
 export const ManifestoText = () => (
-  <motion.section 
-    className={styles.manifestoWrapper}
-    variants={containerVariants}
-    initial="hidden"
-    animate="visible"
-  >
-    {/* Título y Subtítulo */}
-    <motion.header variants={itemVariants} className={styles.headerGroup}>
-      <h1 className={styles.title}>NUDA</h1>
-      <h2 className={styles.subtitle}>Soluciones Tecnológicas</h2>
-    </motion.header>
-
-    <div className={styles.bodyContent}>
-      {/* Párrafo 1 */}
-      <motion.p variants={itemVariants} className={styles.paragraph}>
-        El software hoy está lleno de capas.{" "}
-        <GlowText>Marketing, ruido, promesas vacías.</GlowText> Es el &apos;fenómeno&apos; de Kant: una fachada que nos impide ver la realidad.
-      </motion.p>
-
-      {/* Párrafo 2 */}
-      <motion.p variants={itemVariants} className={`${styles.paragraph} ${styles.italic}`}>
-        Buscamos el <GlowText>noúmeno</GlowText>, la cosa en sí. Una ingeniería que no necesita vestirse para ser perfecta, porque su valor reside en su propia esencia,{" "}
-        <GlowText>es casi una experiencia nudista.</GlowText>
-      </motion.p>
-    </div>
-  </motion.section>
+  <section id="home" className="min-h-screen w-full flex flex-col items-center justify-center px-6 text-center">
+    <motion.div className="space-y-4 md:space-y-8">
+      <span className="text-[#a31d1d] font-mono text-[10px] md:text-xs tracking-[0.5em] uppercase">
+        Manifiesto Noúmeno
+      </span>
+      <h1 className="text-7xl md:text-9xl font-bold text-white tracking-tighter leading-none">
+        NUDA
+      </h1>
+      <h2 className="text-[#a31d1d] font-mono text-sm md:text-2xl tracking-[0.2em] uppercase">
+        Soluciones Tecnológicas
+      </h2>
+      <p className="text-xs md:text-lg text-white/60 max-w-[300px] md:max-w-2xl mx-auto leading-relaxed uppercase font-mono mt-8">
+        El software hoy está lleno de capas. <br />
+        <span className="text-[#a31d1d]">Marketing, ruido, promesas vacías.</span>
+        <br className="hidden md:block" /> Es el 'fenómeno' de Kant: una fachada que nos impide ver la realidad.
+      </p>
+    </motion.div>
+  </section>
 );

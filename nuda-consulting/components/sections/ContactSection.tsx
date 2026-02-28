@@ -69,30 +69,30 @@ export const ContactSection = () => {
               <div className="space-y-12">
                 <div className="group relative border-b border-white/10 focus-within:border-[#a31d1d] transition-colors duration-500">
                   <span className="text-[#a31d1d] font-mono text-[9px] block mb-2 opacity-0 group-focus-within:opacity-100 transition-opacity uppercase">VAR_IDENTITY</span>
-                  <input required name="nombre" type="text" placeholder="01: Nombre o agencia" className="w-full bg-transparent py-4 text-white outline-none placeholder:text-white/20 uppercase font-bold tracking-tighter text-2xl" />
+                  <input required name="nombre" type="text" placeholder="01: Nombre o agencia" className="w-full bg-transparent py-4 text-white outline-none placeholder:text-white/20 uppercase font-bold tracking-tighter text-lg md:text-2xl transition-all" />
                 </div>
 
                 <div className="group relative border-b border-white/10 focus-within:border-[#a31d1d] transition-colors duration-500">
                   <span className="text-[#a31d1d] font-mono text-[9px] block mb-2 opacity-0 group-focus-within:opacity-100 transition-opacity uppercase">VAR_ENLACE</span>
-                  <input required name="email" type="email" placeholder="02: Email" className="w-full bg-transparent py-4 text-white outline-none placeholder:text-white/20 uppercase font-bold tracking-tighter text-2xl" />
+                  <input required name="email" type="email" placeholder="02: Email" className="w-full bg-transparent py-4 text-white outline-none placeholder:text-white/20 uppercase font-bold tracking-tighter text-lg md:text-2xl transition-all" />
                 </div>
 
                 <div className="group relative border-b border-white/10 focus-within:border-[#a31d1d] transition-colors duration-500">
                   <span className="text-[#a31d1d] font-mono text-[9px] block mb-2 opacity-0 group-focus-within:opacity-100 transition-opacity uppercase">VAR_CONCEPTO</span>
-                  <textarea required name="mensaje" rows={3} placeholder="03: Describe tu idea" className="w-full bg-transparent py-4 text-white outline-none placeholder:text-white/20 uppercase font-bold tracking-tighter text-2xl resize-none" />
+                  <textarea required name="mensaje" rows={3} placeholder="03: Describe tu idea" className="w-full bg-transparent py-4 text-white outline-none placeholder:text-white/20 uppercase font-bold tracking-tighter text-lg md:text-2xl resize-none transition-all" />
                 </div>
               </div>
 
               <button 
                 type="submit"
                 disabled={status === "sending"}
-                className="group relative w-full py-6 border border-white/10 hover:border-[#a31d1d] transition-all duration-500 overflow-hidden"
+                className="group relative w-full py-4 md:py-6 border border-white/10 hover:border-[#a31d1d] transition-all duration-500 overflow-hidden"
               >
                 <AnimatePresence mode="wait">
                   {status === "idle" ? (
-                    <motion.span key="idle" exit={{ opacity: 0 }} className="text-white font-mono text-[10px] uppercase tracking-[0.4em] group-hover:text-[#a31d1d] block">Ejecutar Envío</motion.span>
+                    <motion.span key="idle" exit={{ opacity: 0 }} className="text-white font-mono text-[8px] md:text-[10px] uppercase tracking-[0.4em] group-hover:text-[#a31d1d] block">Ejecutar Envío</motion.span>
                   ) : (
-                    <motion.span key="sending" initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-[#a31d1d] font-mono text-[10px] uppercase tracking-[0.4em] animate-pulse block">Encriptando Payload...</motion.span>
+                    <motion.span key="sending" initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-[#a31d1d] font-mono text-[8px] md:text-[10px] uppercase tracking-[0.4em] animate-pulse block">Encriptando Payload...</motion.span>
                   )}
                 </AnimatePresence>
               </button>
